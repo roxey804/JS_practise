@@ -1,0 +1,28 @@
+
+
+Remember to include a link to jQuery in your HTML <head>
+#-----------HTML------------#
+<head>
+<script src="scripts/script.js"></script>
+</head>
+
+<body>
+<h2 id="toggleclick">Click here!</h2>
+<p id="hiddencontent">You've uncovered secret text :D</p>
+</body>
+
+#-----------CSS------------#
+
+#hiddencontent {display: none;}
+
+#-----------JS------------#
+$ (function() {
+    $('#toggleclick').click(function() {
+        $('#hiddencontent').slideToggle();
+
+    });
+});
+
+#----Specifics for Django----#
+
+HTML: like to your js file using: src="{% static 'js/script.js' %}"
